@@ -5,4 +5,4 @@ def div_check(a,b):
 if __name__ == '__main__':
     a = int(input())
     b = int(input())
-    division_check(a,b)
+    div_check(a,b)

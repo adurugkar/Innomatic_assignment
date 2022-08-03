@@ -4,8 +4,6 @@ import random
 import re
 import sys
 
-from sqlalchemy import between
-
 def check(num):
     if num%2!=0:
         print(f"[{num}] is Weird")
