@@ -107,6 +107,7 @@ celerybeat.pid
 .zip
 zip/
 env/
+streamlit/
 venv/
 ENV/
 env.bak/
