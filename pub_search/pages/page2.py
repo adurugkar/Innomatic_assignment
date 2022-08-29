@@ -23,7 +23,7 @@ else:
     option = st.selectbox('Local_Authority',total_local_authority )
 
     # bar_by_authority = data['local_authority'].value_counts()["Leeds"]
-    st.write(f"Total #{df['local_authority'].value_counts()[option]}  BAR in {option}")
+    st.write(f"Total #{df['local_authority'].value_counts()[option]}  Pub in {option}")
     show_by_post= df[['name', 'address','local_authority']]
     st.dataframe(show_by_post[show_by_post['local_authority']==option])
     data = df[show_by_post['local_authority']==option]

@@ -4,16 +4,12 @@ import pandas as pd
 import numpy as np
 
 st.title("Welcome")
-st.header("You can find the bar by local_authority")
+st.header(f'If You Wnna Drink🍻🥂🥃🍷🥤🍹 So Your Are In Righ Place.')
+st.subheader("You can find the Pub 🏪 by selecting the local_authority and use you current latitude🌐 and longitude🌐 to find nearest Pub.")
 
-# reaning localtion_files
-#reaing columns name 
-columns = pd.read_csv("data\data_dictionary - Sheet1.csv",usecols=["Field"] )
-#reading dataset
-df=pd.read_csv('data/open_pubs.csv', names = columns.Field)
-#replacing '\N' with null value
-df=df.replace('\\N',np.NaN)
-#removing null value rows
-df=df.dropna()
+data = pd.read_csv('data/use_full.csv')
 
-df.to_csv("data/use_full.csv", index=False)
+st.subheader(f"Total #{data.shape[0]} Pub in city. ")
+
+st.write(f"Total #{len(set(data.local_authority))} local_authority in city.")
+
